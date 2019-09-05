@@ -1,0 +1,53 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/allanchau/project#readme",
+  "bugs": {
+    "url": "https://github.com/allanchau/project/issues",
+    "email": "allan.chau@icloud.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Allan Chau",
+    "email": "allan.chau@icloud.com",
+    "url": "https://www.allanchau.com"
+  },
+  "main": "lib/index.js",
+  "bin": {},
+  "man": [],
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allanchau/project.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "confusing-browser-globals": "^1.0.8",
+    "eslint": "^6.3.0",
+    "eslint-config-allanchau": "^10.0.3",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "prettier-eslint-cli": "^5.0.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.1"
+  },
+  "peerDependencies": {}
+}
