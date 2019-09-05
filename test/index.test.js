@@ -1,1 +1,1 @@
-test('always true', () => expect(false).toBe(true));
+test('always true', () => expect(true).toBe(true));
