@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha.1",
   "description": "",
   "homepage": "https://github.com/allanchau/project#readme",
   "bugs": {
@@ -14,8 +14,6 @@
     "url": "https://www.allanchau.com"
   },
   "main": "lib/index.js",
-  "bin": {},
-  "man": [],
   "directories": {
     "lib": "./lib",
     "test": "./test"
@@ -27,13 +25,12 @@
   "scripts": {
     "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
-    "eslint-config-allanchau": "^10.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "husky": "^4.2.3",
-    "jest": "^25.1.0",
-    "lint-staged": "^10.0.7",
-    "prettier-eslint-cli": "^5.0.0"
+    "jest": "^25.2.6",
+    "lint-staged": "^10.1.1",
+    "prettier": "2.0.2"
   },
-  "peerDependencies": {}
+  "dependencies": {}
 }
