@@ -1,3 +1,4 @@
 {
-  "extends": ["prettier"]
+  "root": true,
+  "extends": ["@allanchau/eslint-config"]
 }
