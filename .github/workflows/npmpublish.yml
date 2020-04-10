@@ -1,32 +1,35 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Publish Node.js Package
+name: Publish
 
 on:
   release:
     types: [created]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['10', '12']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: ${{ matrix.node }}
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn test
 
   publish-npm:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['10', '12']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org/
       - run: yarn install --frozen-lockfile
       - run: yarn build
@@ -35,13 +38,16 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
   publish-gpr:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['10', '12']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: ${{ matrix.node }}
           registry-url: https://npm.pkg.github.com/
       - run: yarn install --frozen-lockfile
       - run: yarn build
